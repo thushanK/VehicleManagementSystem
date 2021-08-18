@@ -61,6 +61,8 @@ router.route("/").get( (req,res) => {
 
 })
 
+//update vehicle details
+
 router.route("/update/:id").put(async(req,res) => {
 
     let vehicleId =req.params.id;
