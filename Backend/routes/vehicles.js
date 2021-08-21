@@ -1,6 +1,7 @@
 const router = require("express").Router();
 let vehicle = require ("../models/vehicle");
 
+// adding a vehicle
 router.route("/add").post((req,res) => {
 
     const vehicleOwner = req.body.vehicleOwner;
