@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 
 const vehicleschema = new Schema({
 
-    // vehicle modeule 
+    
+    // vehicle modeule
     
     vehicleOwner :{
         type :String,
