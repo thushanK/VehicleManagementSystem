@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const Employeeschema = new Schema({
 
     
-    // Employee  modeule
+    // Add Employee schema
     
     EmployeeName :{
         type :String,
