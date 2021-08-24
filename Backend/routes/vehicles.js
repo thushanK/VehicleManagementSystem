@@ -100,6 +100,7 @@ router.route("/update/:id").put(async(req,res) => {
     })
 })
 
+    //deleting a vehicle
 router.route("/delete/:id").delete(async (req,res) =>{
 
     let vehicleId = req.params.id;
