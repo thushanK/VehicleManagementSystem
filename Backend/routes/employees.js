@@ -4,41 +4,43 @@ let employee = require ("../models/employee");
 // adding a employee
 router.route("/add").post((req,res) => {
 
-    const vehicleOwner = req.body.vehicleOwner;
 
-    const vehicleType = req.body.vehicleType;
+    const EmployeeName = req.body.EmployeeName;
 
-    const vehicleModel = req.body.vehicleModel; 
+    const Address = req.body.Address;
 
-    const ManufacherYear = Number(req.body.ManufacherYear);
+    const NICNumber = req.body.NICNumber;
 
-    const LicensePlateNumber = req.body.LicensePlateNumber;
-    
-    const vehicleRate = Number(req.body.vehicleRate);
+    const Gender = req.body.Gender;
 
-    const Discription = req.body.Discription;
+    const Email = req.body.Email;
 
-    const newVehicle = new vehicle({
+    const MobileNumber = req.body.MobileNumber;
 
-         vehicleOwner,
+    const JobType = req.body.JobType;
 
-         vehicleType, 
+    const newEmployee = new employee({
 
-         vehicleModel,  
+         
+    EmployeeName, 
 
-         ManufacherYear, 
+    Address,
 
-         LicensePlateNumber, 
+    NICNumber,
 
-         vehicleRate, 
+    Gender,
 
-         Discription
+    Email,
+
+    MobileNumber,
+
+    JobType
 
     })
 
-    newVehicle.save().then( () => {
+    newEmployee.save().then( () => {
 
-        res.json("New vehicle is added")
+        res.json("New employee is added")
    
     }).catch( (err) => {
 
@@ -50,9 +52,9 @@ router.route("/add").post((req,res) => {
 
 router.route("/").get( (req,res) => {
 
-    vehicle.find().then((vehicles) => {
+    employee.find().then((employees) => {
 
-        res.json(vehicles)
+        res.json(employees)
 
     }).catch((err) => {
 
@@ -62,35 +64,35 @@ router.route("/").get( (req,res) => {
 
 })
 
-//update vehicle details
+//update Employee details
 
 router.route("/update/:id").put(async(req,res) => {
 
-    let vehicleId =req.params.id;
-    const {  vehicleOwner, vehicleType, vehicleModel, ManufacherYear, LicensePlateNumber, vehicleRate, Discription } = req.body;
+    let employeeId =req.params.id;
+    const {  EmployeeName, Address, NICNumber, Gender, Email, MobileNumber, JobType } = req.body;
 
-    const updateVehicle = {
+    const updateEmployee = {
 
-        vehicleOwner,
+        EmployeeName, 
 
-         vehicleType, 
-
-         vehicleModel,  
-
-         ManufacherYear, 
-
-         LicensePlateNumber, 
-
-         vehicleRate, 
-
-         Discription
+        Address,
+    
+        NICNumber,
+    
+        Gender,
+    
+        Email,
+    
+        MobileNumber,
+    
+        JobType
 
     }
 
 
-    const update = await vehicle.findByIdAndUpdate(vehicleId, updateVehicle).then(() => {
+    const update = await employee.findByIdAndUpdate(employeeId, updateEmployee).then(() => {
 
-        res.status(200).send({status:"Vehicle updated"});
+        res.status(200).send({status:"employee updated"});
 
     }).catch((err) => {
 
@@ -102,11 +104,11 @@ router.route("/update/:id").put(async(req,res) => {
 
 router.route("/delete/:id").delete(async (req,res) =>{
 
-    let vehicleId = req.params.id;
+    let employeeId = req.params.id;
 
-    await vehicle.findByIdAndDelete(vehicleId).then( () => {
+    await employee.findByIdAndDelete(employeeId).then( () => {
 
-        res.status(200).send({status: "Vehicle is deleted"});
+        res.status(200).send({status: "employee is deleted"});
 
     }).catch((err) => {
 

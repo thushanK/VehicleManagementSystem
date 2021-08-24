@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const vehicleschema = new Schema({
+const Employeeschema = new Schema({
 
     
     // Employee  modeule
@@ -13,38 +13,38 @@ const vehicleschema = new Schema({
 
     },
 
-    vehicleType :{
+    Address :{
         type :String,
         required:true
     },
 
-    vehicleModel :{
+    NICNumber:{
         type :String,
         required:true
     },
 
-    ManufacherYear :{
+    Gender:{
+        type :String,
+        required:true
+    },
+
+    Email :{
+        type :String,
+        required:true
+    },
+
+    MobileNumber :{
         type :Number,
         required:true
     },
 
-    LicensePlateNumber :{
-        type :String,
-        required:true
-    },
-
-    vehicleRate :{
-        type :Number,
-        required:true
-    },
-
-    Discription :{
+    JobType:{
         type :String,
         required:true
     },
 
 }); 
 
-const vehicle = mongoose.model("vehicle",vehicleschema);
+const Employee = mongoose.model("Employee",Employeeschema);
 
-module.exports = vehicle;
+module.exports = Employee;
