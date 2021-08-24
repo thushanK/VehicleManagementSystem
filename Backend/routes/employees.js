@@ -1,5 +1,5 @@
 const router = require("express").Router();
-let vehicle = require ("../models/vehicle");
+let employee = require ("../models/employee");
 
 // adding a employee
 router.route("/add").post((req,res) => {
