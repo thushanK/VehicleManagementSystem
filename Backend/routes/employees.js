@@ -1,5 +1,5 @@
 const router = require("express").Router();
-let employee = require ("../models/employee");
+let employee = require("../models/employee");
 
 // adding a employee
 router.route("/add").post((req,res) => {
@@ -15,7 +15,7 @@ router.route("/add").post((req,res) => {
 
     const Email = req.body.Email;
 
-    const MobileNumber = req.body.MobileNumber;
+    const MobileNumber = Number(req.body.MobileNumber);
 
     const JobType = req.body.JobType;
 

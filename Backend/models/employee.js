@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const Employeeschema = new Schema({
+const employeeschema = new Schema({
 
     
     // Add Employee schema
@@ -45,6 +45,6 @@ const Employeeschema = new Schema({
 
 }); 
 
-const Employee = mongoose.model("Employee",Employeeschema);
+const employee = mongoose.model("employee",employeeschema);
 
-module.exports = Employee;
+module.exports = employee;

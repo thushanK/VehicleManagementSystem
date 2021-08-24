@@ -30,6 +30,9 @@ connection.once("open",() => {
 const vehicleRouter = require("./routes/vehicles.js");
 app.use("/vehicle",vehicleRouter);
 
+const employeeRouter = require("./routes/employees.js");
+app.use("/employee",employeeRouter);
+
 
 
 app.listen(PORT,() => {
