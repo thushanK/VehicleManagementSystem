@@ -1,11 +1,15 @@
 
 import './App.css';
+import Header from './compornents/header';
+import AddVehicle from './compornents/AddVehicle';
 
 function App() {
   return (
-    <div className="App">
+    <div >
+       
+       <Header/>
+       <AddVehicle/>
       
-      <h1>hellow js</h1>
 
     </div>
   );
