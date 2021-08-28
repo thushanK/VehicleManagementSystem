@@ -18,6 +18,12 @@ router.route("/add").post((req,res) => {
 
     const Discription = req.body.Discription;
 
+    const url1 = req.body.url1 ;
+
+    const url2 = req.body.url2 ;
+
+    const url3 = req.body.url3 ;
+
     const newVehicle = new vehicle({
 
          vehicleOwner,
@@ -32,7 +38,13 @@ router.route("/add").post((req,res) => {
 
          vehicleRate, 
 
-         Discription
+         Discription,
+
+         url1,
+
+         url2,
+
+         url3
 
     })
 
