@@ -60,11 +60,13 @@ router.route("/add").post((req,res) => {
 
 })
 
+//get vehicle details
+
 router.route("/").get( (req,res) => {
 
-    vehicle.find().then((vehicles) => {
+    vehicle.find({}).then((data) => {
 
-        res.json(vehicles)
+        res.status(200).send({data:data})
 
     }).catch((err) => {
 
@@ -73,6 +75,7 @@ router.route("/").get( (req,res) => {
     })
 
 })
+
 
 //update vehicle details
 
