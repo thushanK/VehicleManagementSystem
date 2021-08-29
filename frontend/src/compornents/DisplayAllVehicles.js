@@ -61,7 +61,7 @@ let Count = 0
                                     <td> {vehicles.LicensePlateNumber} </td>
                                     <td> {vehicles.vehicleOwner} </td>
                                     <td> {vehicles.vehicleType} </td>
-                                    <td> <button type="submit" class="btn btn-dark mb-2">Edit</button> </td>
+                                    <td> <button type="submit" class="btn btn-dark mb-2"> Edit </button> </td>
                                 </tr>
 
                             ))}
