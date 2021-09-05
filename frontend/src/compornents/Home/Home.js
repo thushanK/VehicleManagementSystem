@@ -91,7 +91,7 @@ export default function AddVehicle() {
           <div class="row">
             <div class="col-lg-3">
               <h2 class="footer-heading mb-4">About Us</h2>
-              <p>tahike tahike tahike thaike tthaike athikeeeeeeee </p>
+              <p>tahike tahike tahike thaike tthaike athikeeeeeeee dela</p>
               <ul class="list-unstyled social">
                 <li><a href="#"><span class="icon-facebook"></span></a></li>
                 <li><a href="#"><span class="icon-instagram"></span></a></li>
